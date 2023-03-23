@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "PopUp-read Url",
+  "description": "This is a basic chrome extension",
+  "version": "0.1",
+  "permissions": [
+    "tabs"
+  ],
+  "action": {
+    "default_icon": "fish.png",
+    "default_popup": "popup.html"
+  }
+}
+

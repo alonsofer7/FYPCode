@@ -1,0 +1,39 @@
+     // useEffect(() => {
+        //     setUrl(currentURL);
+         
+    // }, [])
+
+    
+    // const Product = ({ product }) => {
+    //     const [pageURL, setPageURL] = useState(0);
+    //      useEffect(() => {
+    //        setPageURL(window.location.href);
+    //      })
+
+
+        // let queryOptions = { active: true, lastFocusedWindow: true };
+    // // `tab` will either be a `tabs.Tab` instance or `undefined`.
+    // let [tab] = await chrome.tabs.query(queryOptions);
+
+/////////////////////////////////////////OLD CODE ONLY EXTENSIONS URL
+    //printing URL, but not updating where it is, maybe use setState
+    //assigning actual url with url
+    // const [url, setUrl] = useState("None") 
+    // useEffect(() => {
+    //     const currentURL = window.location.href;
+    //     setUrl(currentURL)
+    // }, [])
+   
+    //this shows everything in the console, 
+    //maybe this way I can create a JSON file with the info and send it?
+    const href = window.location.href;
+    console.log(window.location);
+/////////////////////////////////////////
+
+
+    async function getCurrentTab() {
+        let queryOptions = { active: true, currentWindow: true };
+        // `tab` will either be a `tabs.Tab` instance or `undefined`.
+        let tabs = await chrome.tabs.query(queryOptions);
+        return tabs[0].url;
+  }

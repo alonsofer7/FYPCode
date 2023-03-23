@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Print URL with React",
+    "description": "React Chrome Extension",
+    "version": "1.0",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
+    "background": {
+      "type": "module"
+    },
+    "commands": {
+      "run-foo": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+Y",
+          "mac": "Command+Shift+Y"
+        },
+        "description": "Get URL when activated.",
+        "global": true
+      }
+      },
+    "permissions": [
+      "tabs",
+      "activeTab"
+    ]
+  }
