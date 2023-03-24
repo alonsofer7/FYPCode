@@ -27,22 +27,22 @@ function Popup() {
       .catch(console.error);
   }, []);
 
-  // useEffect(() => {
+  useEffect(() => {
 
-  //   if(activeTab){
-  //     axios
-  //     .post(`http://localhost:5000/names`, {
-  //       url: result.data,
+    if(activeTab){
+      axios
+      .post(`http://localhost:5000/webs/`, {
+        url: result.data,
         
-  //     })
-  //     .then((result) => {
-  //       console.log("Hi");
-  //       setData(result.data); //or reponse.data
-  //     })
-  //     .catch(console.error);
-  //   }
+      })
+      .then((result) => {
+        console.log("Hi");
+        setData(result.data); //or reponse.data
+      })
+      .catch(console.error);
+    }
 
-  // }, [activeTab]);
+  }, [activeTab]);
   // se manda una vez que haya informacion dentro de activeTab, ya que de primeras hemos declarado que esa variable es null
 
   return (
